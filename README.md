@@ -1,6 +1,6 @@
 # Desafio 01 - GoStack
 
-Neste desafio, foram utilizados os conteúdos do priemiro modulo do Bootcamp GoStack utilizando o Node.js.
+Neste desafio, foram utilizados os conteúdos do primeiro módulo do Bootcamp GoStack utilizando o Node.js. Foi criada uma API para manipular dados de projetos de acordo com os métodos listados abaixo:
 
 ## Métodos
 
