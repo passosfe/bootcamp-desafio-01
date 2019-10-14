@@ -4,7 +4,28 @@ const server = express();
 
 server.use(express.json());
 
-const projects = [];
+const projects = [
+  {
+    id: "4",
+    title: "Novo projeto 4",
+    tasks: []
+  },
+  {
+    id: "2",
+    title: "Novo projeto 2",
+    tasks: []
+  },
+  {
+    id: "5",
+    title: "Novo projeto 5",
+    tasks: []
+  },
+  {
+    id: "6",
+    title: "Novo projeto 6",
+    tasks: []
+  }
+];
 let reqs_qtd = 0;
 
 server.use((req, res, next) => {
@@ -40,6 +61,10 @@ function checkIdIsValid(req, res, next) {
 
 server.get("/projects", (req, res) => {
   return res.json(projects);
+});
+
+server.get("/projects/:id", checkIdIsValid, (req, res) => {
+  return res.json(projects[req.index]);
 });
 
 server.post("/projects", checkIdAlreadyExists, (req, res) => {

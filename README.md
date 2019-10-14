@@ -10,6 +10,26 @@ Neste desafio, foram utilizados os conteúdos do priemiro modulo do Bootcamp GoS
 
 É possivel listar todos os projetos criando uma solicitação GET para o seguinte endereço: http://localhost:3000/projects. Será retornada uma resposta no formato JSON com todos os projetos já inseridos.
 
+#### Buscar Projeto por ID
+
+Para buscar um projeto pelo seu respectivo ID, deve ser feita uma solicitação do tipo GET para a seguinte URL: http://localhost:3000/projects/:id. Onde ":id" deverá ser sustituído pelo ID do projeto a ser buscado. Ex: Para buscar o projeto com ID 5, a URL será: http://localhost:3000/projects/5.
+
+Caso o projeto seja encontrado, a resposta conterá as informações do projeto, seguindo o seguinte formato:
+
+```json
+{
+  "id": "ID",
+  "title": "Título do Projeto",
+  "tasks": []
+}
+```
+
+, caso contrário, a resposta conterá o erro que impediu a operação. Ex de erro:
+
+```json
+{ "error": "Project not found" }
+```
+
 ### POST
 
 #### Adicionar Projeto
